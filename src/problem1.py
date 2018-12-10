@@ -180,7 +180,7 @@ def problem1a(m, n):
     # -------------------------------------------------------------------------
 
     for k in range(n**2, (m**2)-1):
-        value = sum_of_digits(math.sin(int(k)))
+        value = sum_of_digits(math.sin(k))
         return value
 
 
