@@ -113,13 +113,24 @@ def problem2a(circle, rectangle, window):
     #    TIME ESTIMATE:   10 to 15 minutes.
     # -------------------------------------------------------------------------
 
-    window = rg.RoseWindow
-    circle = rg.Circle(rg.Point(circle.center), circle.radius)
+    new_window = rg.RoseWindow
+
     circle.attach_to(window)
-    rectangle = rg.Rectangle(rectangle.corner_1, rectangle.corner_2)
+    new_circle = rg.Circle(rg.Point(circle.center.x, circle.center.y), circle.radius)
+    new_circle.fill_color = ''
+    new_circle.attach_to(window)
+
     rectangle.attach_to(window)
+    new_rectangle = rg.Rectangle(rectangle.corner_1, rectangle.corner_2)
+    new_rectangle.outline_color = ''
+    new_rectangle.attach_to(window)
+
+    window.render(2)
+
+    line = rg.Line(rectangle.corner_1, rectangle.corner_2)
+    line.attach_to(window)
+
     window.render()
-    window.close_on_mouse_click()
 
 def run_test_problem2b():
     """ Tests the  problem2b   function. """
