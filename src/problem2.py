@@ -203,6 +203,12 @@ def problem2b(rect, n, delta, win):
     #    TIME ESTIMATE:   15 to 25 minutes.
     # -------------------------------------------------------------------------
 
+    window = rg.RoseWindow
+    rect.attach_to(window)
+    rect2 = rg.Rectangle(rect.center, rect.radius * 2)
+    rect2.fill_color = ''
+    rect2.attach_to(window)
+    window.render()
 
 # -----------------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
