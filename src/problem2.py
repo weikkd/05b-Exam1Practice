@@ -32,7 +32,7 @@ import math
 
 def main():
     """ Calls the   TEST   functions in this module. """
-    run_test_problem2a()
+   # run_test_problem2a()
     run_test_problem2b()
 
 
@@ -205,10 +205,11 @@ def problem2b(rect, n, delta, win):
 
     window = rg.RoseWindow
     rect.attach_to(window)
-    rect2 = rg.Rectangle(rect.center, rect.radius * 2)
+    rect2 = rg.Rectangle(rect.corner_1 * 2, rect.corner_2 * 2)
     rect2.fill_color = ''
     rect2.attach_to(window)
     window.render()
+    window.close_on_mouse_click()
 
 # -----------------------------------------------------------------------------
 # Calls  main  to start the ball rolling.

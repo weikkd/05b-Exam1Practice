@@ -368,7 +368,7 @@ def problem1c(n):
 
     for k in range(n+1):
         if is_prime(k <= n) is True:
-            value = sum_of_digits(k*k*k)
+            value = sum_of_digits(k*n)
     return value
 
 ###############################################################################
