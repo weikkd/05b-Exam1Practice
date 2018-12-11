@@ -190,7 +190,7 @@ def problem0a(n):
     """
 
     sum = sum_of_digits(n)
-    if sum %2 == 0:
+    if sum % 2 == 0:
         return False
     else:
         return True
